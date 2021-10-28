@@ -18,14 +18,17 @@ const fourthItem = document.querySelector('.item4');
 
 const sixthItem = document.querySelector('.item6');
 
-navToggle.addEventListener('click',function(){
+navToggle.addEventListener('click',function(e){
 
    const linksHeight = links.getBoundingClientRect().height; 
   
    const linksContainerHeight = linksContainer.getBoundingClientRect().height;
-  
-   if (linksContainerHeight === 0)
-        linksContainer.style.height = `${linksHeight}px`
+
+   if (linksContainerHeight === 0){
+    
+        linksContainer.style.height = `${linksHeight}px`;
+        navCenter.classList.add('bg-color-item6');
+   }
    else {
       linksContainer.style.height = 0; 
    }

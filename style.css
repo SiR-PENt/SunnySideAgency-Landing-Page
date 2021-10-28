@@ -51,8 +51,6 @@ nav {
    display:grid;
    grid-template-columns: auto auto;
    padding:5px 10px;
-   
- 
 }
 .logo-container>svg { 
     align-self:center;
@@ -68,6 +66,7 @@ nav {
     justify-items:center;
     background-color:white; 
     padding:50px 0 20px 0; 
+    
 }
 .links::after {
     content:attr(data-content) '';
@@ -100,6 +99,7 @@ nav {
 }
 .links-container{
    height:0;
+   transition:all 0.8s linear;
 }
 
 button {
@@ -284,23 +284,24 @@ button {
 /* JavaScript Classes */
 
 .bg-color-yellow{
-    background-color:  hsl(51, 100%, 49%);
-    transition:all 0.5 ease;
+    background-color: hsl(51, 100%, 49%);
+    transition:all 0.2s linear;
 }
 .bg-color-gd {
     background-color:hsl(167, 40%, 24%);
-    transition:all .5s ease;
+    transition:all .2s linear;
 }
 .bg-color-pg {
     background-color:hsl(198, 62%, 26%);
-    transition:all .5s ease;
+    transition:all .2s linear;
 }
 .bg-color-item4 {
     background-color:hsl(232, 10%, 55%);
+    transition:all .2s linear;
 }
 .bg-color-item6{
     background-color:hsl(194, 85%, 57.5%);
-    transition:all 0.5 ease;
+    transition:all 0.2s linear;
 }
 
 @media (min-width:675px){
