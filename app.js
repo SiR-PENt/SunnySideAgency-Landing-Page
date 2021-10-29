@@ -1,3 +1,4 @@
+
 const navToggle = document.querySelector('.nav-toggle');
 
 const navCenter = document.querySelector('.nav-center');
@@ -40,15 +41,15 @@ window.addEventListener('scroll',function(){
    const logoContainerHeight = logoContainer.getBoundingClientRect().height;
 //get height of each of the item from the top of the window and subtract each from logoContainer
 
-   const firstItemHeight = firstItem.offsetTop-logoContainerHeight;
+   const firstItemHeight = firstItem.offsetTop-40;
 
-   const thirdItemHeight = thirdItem.offsetTop - logoContainerHeight;
+   const thirdItemHeight = thirdItem.offsetTop - 40;
 
-   const pgServicesHeight = pgServices.offsetTop-logoContainerHeight;
+   const pgServicesHeight = pgServices.offsetTop-40;
 
-   const fourthItemHeight = fourthItem.offsetTop-logoContainerHeight;
+   const fourthItemHeight = fourthItem.offsetTop-40;
 
-   const sixthItemHeight = sixthItem.offsetTop-logoContainerHeight;
+   const sixthItemHeight = sixthItem.offsetTop-40;
 
    
 //add class to specific areas of the window
@@ -85,3 +86,25 @@ window.addEventListener('scroll',function(){
     navCenter.classList.remove('bg-color-item6');
    }
 })
+// selesct all of the scroll-links
+const scrollLinks =  document.querySelectorAll('.scroll-link');
+// loop through each of the scroll-link
+scrollLinks.forEach(link => { 
+   // and add a click event to each of them
+   link.addEventListener('click', e => {
+      e.preventDefault();// prevent the existing events
+      const navCenter = document.querySelector('.nav-center');
+      const navHeight = navCenter.getBoundingClientRect().height;
+      
+      const id = e.currentTarget.getAttribute('href').slice(1);//get attribute of each of them and remove the # tag with splice
+      const element = document.getElementById(id);//get corresponding id of the element that is clicked
+     position = element.offsetTop - 40 -40;
+     
+      window.scrollTo({
+         left:0,top:position
+      })
+      linksContainer.style.height = 0;
+      });
+   })
+
+

@@ -88,7 +88,7 @@ nav {
 .links li:hover {
     background-color:hsl(51, 100%, 49%);
     border-radius:50px;
-    transition:background-color 0.8s ease-in;
+    transition:background-color 0.8s linear;
     text-transform: uppercase;
 }
 .links li a {
@@ -99,7 +99,7 @@ nav {
 }
 .links-container{
    height:0;
-   transition:all 0.8s linear;
+   transition:all 0.5s linear;
 }
 
 button {
