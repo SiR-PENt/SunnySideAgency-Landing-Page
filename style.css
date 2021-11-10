@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Fraunces:wght@300&display=swap');
+
 :root{
     scroll-behavior: smooth;
    
@@ -7,8 +8,9 @@
 *{
     box-sizing:border-box;
     margin:0;  
-    padding:0; 
+    
 }
+
 a {
      text-decoration:none;
 }
@@ -136,6 +138,7 @@ button {
 .itemb { 
     display:grid;
     grid-gap:35px;
+    grid-template-rows: auto 1fr auto;
     text-align:center;  
     width:87%;
     color:hsl(212, 27%, 19%);
@@ -144,9 +147,9 @@ button {
 .article-header{
     font-size:35px; 
     align-self:end;
-    
     font-weight:900;
 }
+
 .itemb .desc {
     line-height:1.8rem; 
     align-self: center;
